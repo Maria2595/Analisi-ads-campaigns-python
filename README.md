@@ -91,4 +91,4 @@ campaign_report['Livello_ROAS'] = campaign_report['ROAS'].apply(ROAS_range)
 - Utilizza una **custom function** riutilizzabile su qualsiasi colonna numerica
 - La logica può essere facilmente adattata ad altri KPI (ARPU, CPC, ecc.)
 
-📌 *Il codice completo è disponibile in `notebooks/ads_analysis.ipynb`.*
+📌 *Il codice completo è disponibile in `AnalisiPython/MP1.ipynb`.*
