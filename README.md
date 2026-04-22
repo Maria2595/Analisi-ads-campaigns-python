@@ -66,3 +66,23 @@ Insight 3 – Standard il più volatile
 Insight 4 – ROAS e ARPU sotto la media per tutti e tre i tipi
 •	Performance complessiva migliorabile
 •	Opportunità di ottimizzazione per tutti i segmenti
+
+SNIPPET CODICE PYTHON 
+```python
+# Calcolo KPI e aggregazione in un'unica pipeline
+campaign_report = (campaign_data
+    .assign(
+        ARPU = lambda x: x['Revenue_Generated'] / x['Conversions'],
+        ROAS = lambda x: x['Revenue_Generated'] / x['Budget'],
+        Profit_Margin = lambda x: x['Revenue_Generated'] - x['Budget']
+    )
+    .groupby(['Campaign_ID', 'Subscription_Tier'])
+    .agg({
+        'ROAS': 'mean',
+        'ARPU': 'mean',
+        'Profit_Margin': 'sum'
+    })
+    .round(2)
+    .reset_index()
+)
+```
