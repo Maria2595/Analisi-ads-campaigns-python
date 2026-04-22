@@ -4,7 +4,7 @@ Data progetto: Aprile 2026
 Dataset: 10.000 campagne pubblicitarie online (3 tipi di abbonamento) 
 
 🔗 Dashboard Power BI
-👉 (https://github.com/Maria2595/Progetto-tracciamento-KPIs-python/raw/main/Marketing%20Dashboard.pbix)
+👉(https://github.com/Maria2595/Analisi-ads-campaigns-python/raw/main/Dashboard/Marketing%20Dashboard%20.pbix)
 
 📌 Nota: La dashboard non è pubblicata online per rispettare le policy di sicurezza
 
