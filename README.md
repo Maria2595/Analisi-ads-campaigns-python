@@ -67,22 +67,28 @@ Insight 4 – ROAS e ARPU sotto la media per tutti e tre i tipi
 •	Performance complessiva migliorabile
 •	Opportunità di ottimizzazione per tutti i segmenti
 
-SNIPPET CODICE PYTHON 
+
+## 💻 Snippet Python (esempio)
+
+Ecco un esempio della custom function utilizzata per classificare le performance delle campagne:
+
 ```python
-# Calcolo KPI e aggregazione in un'unica pipeline
-campaign_report = (campaign_data
-    .assign(
-        ARPU = lambda x: x['Revenue_Generated'] / x['Conversions'],
-        ROAS = lambda x: x['Revenue_Generated'] / x['Budget'],
-        Profit_Margin = lambda x: x['Revenue_Generated'] - x['Budget']
-    )
-    .groupby(['Campaign_ID', 'Subscription_Tier'])
-    .agg({
-        'ROAS': 'mean',
-        'ARPU': 'mean',
-        'Profit_Margin': 'sum'
-    })
-    .round(2)
-    .reset_index()
-)
+def ROAS_range(ROAS, valore_medio=5, valore_alto=100):
+    """Classifica il ROAS in Basso, Medio o Alto."""
+    if ROAS <= valore_medio:
+        return 'ROAS Basso'
+    elif ROAS <= valore_alto:
+        return 'ROAS Medio'
+    else:
+        return 'ROAS Alto'
+
+# Applicazione della funzione al DataFrame
+campaign_report['Livello_ROAS'] = campaign_report['ROAS'].apply(ROAS_range)
 ```
+
+**Cosa fa questo codice:**
+- Classifica il ROAS (Return on Ad Spend) in tre livelli di performance
+- Utilizza una **custom function** riutilizzabile su qualsiasi colonna numerica
+- La logica può essere facilmente adattata ad altri KPI (ARPU, CPC, ecc.)
+
+📌 *Il codice completo è disponibile in `notebooks/ads_analysis.ipynb`.*
