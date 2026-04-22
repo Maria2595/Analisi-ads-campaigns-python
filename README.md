@@ -10,6 +10,7 @@ Dataset: 10.000 campagne pubblicitarie online (3 tipi di abbonamento)
 
 📁 Contenuto repository
 
+```
 Analisi-vendite-sql/
 ├── Dashboard/
 │   └── Marketing Dashboard.pbix          # Dashboard Power BI
