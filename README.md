@@ -4,7 +4,15 @@ Data progetto: Aprile 2026
 Dataset: 10.000 campagne pubblicitarie online (3 tipi di abbonamento) 
 
 🔗 Dashboard Power BI
-👉(https://github.com/Maria2595/Analisi-ads-campaigns-python/raw/main/Dashboard/Marketing%20Dashboard%20.pbix)
+👉(https://github.com/Maria2595/Analisi-ads-campaigns-python/raw/main/Dashboard/Marketing%20Dashboard%20.pbix) 
+
+Anteprima Dashboard
+
+
+
+https://github.com/user-attachments/assets/370c9834-7cb0-46c5-9574-44c1b524a2dc
+
+
 
 📌 Nota: La dashboard non è pubblicata online per rispettare le policy di sicurezza
 
